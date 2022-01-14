@@ -1,0 +1,20 @@
+form {
+    justify-content: space-around;
+}
+
+label {
+    margin-bottom: 10px;
+    margin-top: 10px;
+}
+
+.country {
+    margin-top: 20px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+select {
+    height: 40px;
+    width: 100px;
+}

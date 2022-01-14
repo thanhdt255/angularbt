@@ -1,0 +1,37 @@
+<form style="width: 60%;margin: auto;margin-top: 30px;" class="form-group d-flex" #useform="ngForm" (submit)="Senddata()">
+    <div style="width: 40%;">
+        <label for="firstname">First Name*</label>
+        <input type="text" id="firstname" class="form-control" ngModel name="firstname" required />
+        <label for="lastname">Last Name*</label>
+        <input ngModel type="text" id="lastname" class="form-control" name="lastname" required />
+        <label for="phone">Phone number*</label>
+        <input ngModel type="text" id="phone" class="form-control" name="phonenumber" required />
+
+        <input style="margin-top: 40px;margin-right: 10px;" type="checkbox" name="" id="check">
+        <label for="check">Set as my prefered address</label>
+    </div>
+    <div style="width: 40%;">
+        <label for="street">Street address*</label>
+        <input ngModel type="text" id="street" class="form-control" name="street" required />
+        <label for="apt">Apt, suite, etc (optional)</label>
+        <input ngModel type="text" id="apt" class="form-control" name="apt" required />
+        <label for="City">City*</label>
+        <input ngModel type="text" id="City" class="form-control" name="City" required />
+        <div class="country">
+            <div style="width: 50%;">
+                <label for="select">State*</label>
+                <select ngModel id="select" class="form-select" aria-label="Default select example">
+     
+          <option selected value="1">Virginia</option>
+          <option value="2">Two</option>
+          <option value="3">Three</option>
+        </select>
+            </div>
+            <div style="width: 40%;">
+                <label for="zipcode">Zip code*</label>
+                <input ngModel type="text" id="zipcode" class="form-control" name="City" required />
+            </div>
+        </div>
+        <input [disabled]="!useform.valid" style="float: right;margin-top: 20px;" class="bg-primary text-white btn" type="submit" name="" id="" value="continue">
+    </div>
+</form>
